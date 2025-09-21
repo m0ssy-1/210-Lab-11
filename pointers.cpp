@@ -8,6 +8,14 @@ struvt Player {
     string inventory;  //items
     int itemCount;  //number of items in inventory
 
+    Player(stign      ) {
+
+
+
+        
+    }
+
+
 }
 
 
