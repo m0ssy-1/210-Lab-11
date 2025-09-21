@@ -30,7 +30,14 @@ struvt Player {
 
     }
 
-
+//print player info
+void printPlayer() {
+    cout << "something" << name << " something" << level << "something" ;
+    cout << "something" ;
+    if(itemCount == 0) {
+        cout << ""
+    }
+}
 
 
 }
