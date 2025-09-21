@@ -8,12 +8,29 @@ struvt Player {
     string inventory;  //items
     int itemCount;  //number of items in inventory
 
-    Player(stign      ) {
-
-
-
-        
+    //constructor
+    Player(string n = "", int lvl = 1) {
+        name = n;
+        level = lvl;
+        inventory = nullptr;
+        itemCount = 0;
     }
+
+    //add item to inv
+    void addItem(string item){
+        string newInventory = new string(itemCount + 1);
+
+        for (int i = 0; i < itemCount; i++) {
+            newInv[i] = inventory[i];
+        }
+        newInventory(itemCount) = item;
+
+        inventory = new newInventory;
+        itemCount++;
+
+    }
+
+
 
 
 }
