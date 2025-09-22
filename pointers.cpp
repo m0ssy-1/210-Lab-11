@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-usding namespace std;
+using namespace std;
 
-struvt Player {
+struct Player {
     string name; //player name
     int level;  //player lvl
     string inventory;  //items
@@ -18,10 +18,10 @@ struvt Player {
 
     //add item to inv
     void addItem(string item){
-        string newInventory = new string(itemCount + 1);
+        string* newInventory = new string[itemCount + 1];
 
         for (int i = 0; i < itemCount; i++) {
-            newInv[i] = inventory[i];
+            newInventory[i] = inventory[i];
         }
         newInventory(itemCount) = item;
 
@@ -41,6 +41,30 @@ void printPlayer() {
 
 
 }
+//ass player to party
+struct Party {
+    Player* players;
+    int playerCount;
+
+    Party() {
+        players = nullptr;
+        playerCount = 0;
+    }
+
+    void addPlayer(Player newPlayer) {
+        Player* newPlayers = new Player[playerCount + 1];
+        for (int i = 0; i < playerCount; i++)[
+            newPlayers[i] = players[i];
+        ]
+        newPlayers[playerCount] = newPlayer;
+
+        delete[] players;
+        players = newPlayers;
+        playerCount;
+    }
+
+}
+
 
 
 int main() {
