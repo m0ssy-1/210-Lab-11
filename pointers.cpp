@@ -36,19 +36,19 @@ struct Player {
 
 //print player info
 void printPlayer() {
-    cout << "something" << name << " something" << level << "something" ;
-    cout << "something" ;
+    cout << "Player: " << name << " (Level " << level << ")\n" ;
+    cout << " Inventory: " ;
     if(itemCount == 0) {
-        cout << "";
+        cout << "Empty\n";
     } else {
         for (int i = 0; i < itemCount; i++){
             cout << inventory[i];
-            if (i < itemCount - 1) cout << "  ";
+            if (i < itemCount - 1) cout << ", ";
         }
         cout << endl;
     }
 }
-    Player() {
+    ~Player() {
         delete[] inventory;
     }
 
@@ -77,6 +77,18 @@ struct Party {
         delete[] players;
         players = newPlayers;
         playerCount++;
+    }
+
+    void printParty() {
+        cout << "Party has " << playerCount << " player(s):\n";
+        for (int i = 0; i < playerCount; i++) {
+            players[i].printPlayer();
+     }
+    cout << endl;
+}
+
+    ~Party() {
+        delete[] players;
     }
 
 };
