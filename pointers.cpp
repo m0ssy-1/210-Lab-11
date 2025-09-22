@@ -64,6 +64,7 @@ struct Party {
         playerCount = 0;
     }
 
+    //add new player
     void addPlayer(Player newPlayer) {
 
         Player* newPlayers = new Player[playerCount + 1];
@@ -86,20 +87,20 @@ int main() {
     Party myParty;
 
     //adding players
-    Player p1("ARcher");
+    Player p1("Archer", 5);
     p1.addItem("Bow");
     p1.addItem("Health potion");
 
-    Plater p2("Mage");
+    Player p2("Mage", 10);
     p2.addItem("staff");
     p2.addItem("Grimore");
     p2.addItem("mana potion");
 
-    PLayer p3("Warrior");
+    Player p3("Warrior", 8);
     p3.addItem("sword");
-    p3.addIrem("stamina potion");
+    p3.addItem("stamina potion");
 
-    Plater p4("tank");
+    Player p4("tank", 7);
     p4.addItem("shield");
     p4.addItem("strength potion");
 
